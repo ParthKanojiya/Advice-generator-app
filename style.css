@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --quote-font-size: 28px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 0px;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--Dark-Blue);
+    color: white;
+}
+
+.container {
+    background-color: var(--Dark-Grayish-Blue);
+    color: white;
+    max-width: 31rem;
+    text-align: center;
+    padding: 30px 50px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: auto 1rem;
+}
+
+.dice {
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    padding: 15px 16px 12px;
+    border: 0;
+    cursor: pointer;
+    margin: 0 auto -50px;
+}
+
+.dice:hover {
+    box-shadow: 0 0 40px var(--Neon-Green);
+}
+
+#adviseID {
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+#advice {
+    font-size: var(--quote-font-size);
+    font-weight: 700;
+    min-height: 150px;
+}
+
+.attribution {
+    position: absolute;
+    font-size: 11px;
+    text-align: center;
+    align-self: flex-end;
+    background-color: var(--Dark-Grayish-Blue);
+    padding: 10px;
+    color: var(--Light-Cyan);
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .container {
+        max-width: 375px;
+        margin: auto;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    #advice {
+        font-size: 22px;
+    }
+
+}
